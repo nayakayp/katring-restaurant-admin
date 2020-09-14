@@ -6,11 +6,11 @@ router.get("/editprofil", (req, res) => {
 });
 
 router.get("/", (req, res) => {
-  res.render("dashboard.ejs", {});
+  res.render("dashboard.ejs", { pageName: "dashboard" });
 });
 
 router.get("/transaksi", (req, res) => {
-  res.render("transaksi.ejs", {});
+  res.render("transaksi.ejs", { pageName: "transaksi" });
 });
 
 router.get("/produk", (req, res) => {
