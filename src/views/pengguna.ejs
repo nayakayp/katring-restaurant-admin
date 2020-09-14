@@ -1,0 +1,247 @@
+<!-- Content Header (Page header) -->
+<div class="content-header">
+  <div class="container-fluid">
+    <div class="row mb-2">
+      <div class="col-sm-6">
+        <h1 class="m-0 text-dark">Info Pengguna</h1>
+      </div>
+      <!-- /.col -->
+      <div class="col-sm-6">
+        <ol class="breadcrumb float-sm-right">
+          <li class="breadcrumb-item"><a href="#">Home</a></li>
+          <li class="breadcrumb-item active">Pengguna</li>
+        </ol>
+      </div>
+      <!-- /.col -->
+    </div>
+    <!-- /.row -->
+  </div>
+  <!-- /.container-fluid -->
+</div>
+<!-- /.content-header -->
+<div class="content">
+  <div class="card card-danger">
+    <div class="card-header">
+      <h3 class="card-title">Tambah Pengguna</h3>
+    </div>
+    <!-- /.card-header -->
+    <!-- form start -->
+    <form role="form">
+      <div class="card-body">
+        <div class="form-group">
+          <label for="inputNamePengguna">Nama pengguna</label>
+          <input
+            type="text"
+            class="form-control"
+            id="inputNamePengguna"
+            placeholder="Edit Namamu"
+            name="nama"
+          />
+        </div>
+
+        <div class="form-group">
+          <label for="inputEmailPengguna">Email pengguna</label>
+          <input
+            type="email"
+            class="form-control"
+            id="inputEmailPengguna"
+            placeholder="Edit emailmu"
+            name="email"
+          />
+        </div>
+        <div class="form-group">
+          <label for="inputPassword1Pengguna">Password</label>
+
+          <input
+            type="password"
+            class="form-control"
+            id="inputPassword1Pengguna"
+            placeholder="Password"
+            name="password"
+          />
+        </div>
+
+        <div class="form-group">
+          <label for="inputPassword2Pengguna">Password Confirmation</label>
+
+          <input
+            type="password"
+            class="form-control"
+            id="inputPassword2Pengguna"
+            placeholder="Password"
+            name="password2"
+          />
+        </div>
+
+        <div class="form-group">
+          <label for="selectRolePengguna">Roles</label>
+          <select class="custom-select" name="roles">
+            <option>Super Admin</option>
+            <option>Support</option>
+          </select>
+        </div>
+      </div>
+      <!-- /.card-body -->
+
+      <div class="card-footer">
+        <button type="submit" class="btn btn-primary">Create</button>
+      </div>
+    </form>
+  </div>
+  <div class="row">
+    <div class="col-12">
+      <div class="card card-danger">
+        <div class="card-header">
+          <h3 class="card-title">Daftar Pengguna</h3>
+
+          <div class="card-tools">
+            <div class="input-group input-group-sm" style="width: 150px">
+              <input
+                type="text"
+                name="table_search"
+                class="form-control float-right"
+                placeholder="Search"
+              />
+
+              <div class="input-group-append">
+                <button type="submit" class="btn btn-default">
+                  <i class="fas fa-search"></i>
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- /.card-header -->
+        <div class="card-body table-responsive p-0" style="height: 300px">
+          <table class="table table-head-fixed text-nowrap">
+            <thead>
+              <tr>
+                <th>#</th>
+                <th>Nama Pengguna</th>
+                <th>Email Pengguna</th>
+                <th>Roles</th>
+                <th>Action</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>183</td>
+                <td>John Doe</td>
+                <td>11-7-2014</td>
+                <td><span class="tag tag-success">Approved</span></td>
+                <td>
+                  <button type="button" class="btn btn-success">
+                    <i class="far fa-edit"></i>
+                  </button>
+                  <button type="button" class="btn btn-danger">
+                    <i class="far fa-trash-alt"></i>
+                  </button>
+                </td>
+              </tr>
+              <tr>
+                <td>219</td>
+                <td>Alexander Pierce</td>
+                <td>11-7-2014</td>
+                <td><span class="tag tag-warning">Pending</span></td>
+                <td>
+                  <button type="button" class="btn btn-success">
+                    <i class="far fa-edit"></i>
+                  </button>
+                  <button type="button" class="btn btn-danger">
+                    <i class="far fa-trash-alt"></i>
+                  </button>
+                </td>
+              </tr>
+              <tr>
+                <td>657</td>
+                <td>Bob Doe</td>
+                <td>11-7-2014</td>
+                <td><span class="tag tag-primary">Approved</span></td>
+                <td>
+                  <button type="button" class="btn btn-success">
+                    <i class="far fa-edit"></i>
+                  </button>
+                  <button type="button" class="btn btn-danger">
+                    <i class="far fa-trash-alt"></i>
+                  </button>
+                </td>
+              </tr>
+              <tr>
+                <td>175</td>
+                <td>Mike Doe</td>
+                <td>11-7-2014</td>
+                <td><span class="tag tag-danger">Denied</span></td>
+                <td>
+                  <button type="button" class="btn btn-success">
+                    <i class="far fa-edit"></i>
+                  </button>
+                  <button type="button" class="btn btn-danger">
+                    <i class="far fa-trash-alt"></i>
+                  </button>
+                </td>
+              </tr>
+              <tr>
+                <td>134</td>
+                <td>Jim Doe</td>
+                <td>11-7-2014</td>
+                <td><span class="tag tag-success">Approved</span></td>
+                <td>
+                  <button type="button" class="btn btn-success">
+                    <i class="far fa-edit"></i>
+                  </button>
+                  <button type="button" class="btn btn-danger">
+                    <i class="far fa-trash-alt"></i>
+                  </button>
+                </td>
+              </tr>
+              <tr>
+                <td>494</td>
+                <td>Victoria Doe</td>
+                <td>11-7-2014</td>
+                <td><span class="tag tag-warning">Pending</span></td>
+                <td>
+                  <button type="button" class="btn btn-success">
+                    <i class="far fa-edit"></i>
+                  </button>
+                  <button type="button" class="btn btn-danger">
+                    <i class="far fa-trash-alt"></i>
+                  </button>
+                </td>
+              </tr>
+              <tr>
+                <td>832</td>
+                <td>Michael Doe</td>
+                <td>11-7-2014</td>
+                <td><span class="tag tag-primary">Approved</span></td>
+                <td>
+                  <button type="button" class="btn btn-success">
+                    <i class="far fa-edit"></i>
+                  </button>
+                  <button type="button" class="btn btn-danger">
+                    <i class="far fa-trash-alt"></i>
+                  </button>
+                </td>
+              </tr>
+              <tr>
+                <td>982</td>
+                <td>Rocky Doe</td>
+                <td>11-7-2014</td>
+                <td><span class="tag tag-danger">Denied</span></td>
+                <td>
+                  <button type="button" class="btn btn-success">
+                    <i class="far fa-edit"></i>
+                  </button>
+                  <button type="button" class="btn btn-danger">
+                    <i class="far fa-trash-alt"></i>
+                  </button>
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <!-- /.card-body -->
+      </div>
+      <!-- /.card -->
+    </div>
+  </div>
+</div>

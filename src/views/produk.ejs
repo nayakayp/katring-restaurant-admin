@@ -1,0 +1,266 @@
+<!-- Content Header (Page header) -->
+<div class="content-header">
+  <div class="container-fluid">
+    <div class="row mb-2">
+      <div class="col-sm-6">
+        <h1 class="m-0 text-dark">Info Produk</h1>
+      </div>
+      <!-- /.col -->
+      <div class="col-sm-6">
+        <ol class="breadcrumb float-sm-right">
+          <li class="breadcrumb-item"><a href="#">Home</a></li>
+          <li class="breadcrumb-item active">Produk</li>
+        </ol>
+      </div>
+      <!-- /.col -->
+    </div>
+    <!-- /.row -->
+  </div>
+  <!-- /.container-fluid -->
+</div>
+<!-- /.content-header -->
+<div class="content">
+  <div class="container-fluid">
+    <div class="row">
+      <div class="col-md-6">
+        <div class="card card-danger">
+          <div class="card-header">
+            <h3 class="card-title">Tambah Produk</h3>
+          </div>
+          <!-- /.card-header -->
+          <!-- form start -->
+          <form role="form">
+            <div class="card-body">
+              <div class="form-group">
+                <label for="inputNameProduk">Nama produk</label>
+                <input
+                  type="text"
+                  class="form-control"
+                  id="inputNameProduk"
+                  placeholder="Input nama produk"
+                  name="nama"
+                />
+              </div>
+
+              <div class="form-group">
+                <label for="inputHargaProduk">Harga produk</label>
+                <input
+                  type="number"
+                  class="form-control"
+                  id="inputHargaProduk"
+                  placeholder="Input harga produk"
+                  name="harga"
+                />
+              </div>
+
+              <div class="form-group">
+                <label for="inputDeskripsiProduk">Deskripsi produk</label>
+                
+                <textarea
+                  type="number"
+                  class="form-control"
+                  id="inputDeskripsiProduk"
+                  placeholder="Input deskripsi produk"
+                  name="deskripsi"
+                  rows="7"
+                /></textarea>
+              </div>
+
+
+              <div class="form-group">
+                <label for="selectKategoriProduk">Kategori produk</label>
+                <select class="custom-select" name="kategori">
+                  <option>Jawa Timur</option>
+                  <option>Aceh</option>
+                  <option>Sumatera Barat</option>
+                  <option>Kalimantan Utara</option>
+                </select>
+              </div>
+            </div>
+            <!-- /.card-body -->
+
+            <div class="card-footer">
+              <button type="submit" class="btn btn-primary">Create</button>
+            </div>
+          </form>
+        </div>
+      </div>
+      <div class="col-md-6">
+        <div class="card card-danger">
+          <div class="card-header">
+            <h3 class="card-title">Tambah Kategori</h3>
+          </div>
+          <!-- /.card-header -->
+          <!-- form start -->
+          <form role="form">
+            <div class="card-body">
+              <div class="form-group">
+                <label for="createKategoriProduk">Nama Kategori</label>
+                <input
+                  type="text"
+                  class="form-control"
+                  id="createKategoriProduk"
+                  placeholder="Input nama kategori produk"
+                  name="kategori"
+                />
+              </div>
+            </div>
+            <!-- /.card-body -->
+            <div class="card-footer">
+              <button type="submit" class="btn btn-primary">Add</button>
+            </div>
+          </form>
+        </div>
+
+        <div class="row">
+          <div class="col-12">
+            <div class="card card-danger">
+              <div class="card-header">
+                <h3 class="card-title">Daftar Kategori</h3>
+      
+                <div class="card-tools">
+                  <div class="input-group input-group-sm" style="width: 150px">
+                    <input
+                      type="text"
+                      name="table_search"
+                      class="form-control float-right"
+                      placeholder="Search"
+                    />
+      
+                    <div class="input-group-append">
+                      <button type="submit" class="btn btn-default">
+                        <i class="fas fa-search"></i>
+                      </button>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <!-- /.card-header -->
+              <div class="card-body table-responsive p-0" style="height: 300px">
+                <table class="table table-head-fixed text-nowrap">
+                  <thead>
+                    <tr>
+                      <th>#</th>
+                      <th>Nama Kategori</th>
+                      <th>Action</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr>
+                      <td>183</td>
+                      <td>John Doe</td>
+                      
+                      <td>
+                        <button type="button" class="btn btn-success">
+                          <i class="far fa-edit"></i>
+                        </button>
+                        <button type="button" class="btn btn-danger">
+                          <i class="far fa-trash-alt"></i>
+                        </button>
+                      </td>
+                    </tr>
+                    <tr>
+                      <td>219</td>
+                      <td>Alexander Pierce</td>
+                      
+                      <td>
+                        <button type="button" class="btn btn-success">
+                          <i class="far fa-edit"></i>
+                        </button>
+                        <button type="button" class="btn btn-danger">
+                          <i class="far fa-trash-alt"></i>
+                        </button>
+                      </td>
+                    </tr>
+                    <tr>
+                      <td>657</td>
+                      <td>Bob Doe</td>
+                      
+                      <td>
+                        <button type="button" class="btn btn-success">
+                          <i class="far fa-edit"></i>
+                        </button>
+                        <button type="button" class="btn btn-danger">
+                          <i class="far fa-trash-alt"></i>
+                        </button>
+                      </td>
+                    </tr>
+                    <tr>
+                      <td>175</td>
+                      <td>Mike Doe</td>
+                      
+                      <td>
+                        <button type="button" class="btn btn-success">
+                          <i class="far fa-edit"></i>
+                        </button>
+                        <button type="button" class="btn btn-danger">
+                          <i class="far fa-trash-alt"></i>
+                        </button>
+                      </td>
+                    </tr>
+                    <tr>
+                      <td>134</td>
+                      <td>Jim Doe</td>
+                      
+                      <td>
+                        <button type="button" class="btn btn-success">
+                          <i class="far fa-edit"></i>
+                        </button>
+                        <button type="button" class="btn btn-danger">
+                          <i class="far fa-trash-alt"></i>
+                        </button>
+                      </td>
+                    </tr>
+                    <tr>
+                      <td>494</td>
+                      <td>Victoria Doe</td>
+                      
+                      <td>
+                        <button type="button" class="btn btn-success">
+                          <i class="far fa-edit"></i>
+                        </button>
+                        <button type="button" class="btn btn-danger">
+                          <i class="far fa-trash-alt"></i>
+                        </button>
+                      </td>
+                    </tr>
+                    <tr>
+                      <td>832</td>
+                      <td>Michael Doe</td>
+                      
+                      <td>
+                        <button type="button" class="btn btn-success">
+                          <i class="far fa-edit"></i>
+                        </button>
+                        <button type="button" class="btn btn-danger">
+                          <i class="far fa-trash-alt"></i>
+                        </button>
+                      </td>
+                    </tr>
+                    <tr>
+                      <td>982</td>
+                      <td>Rocky Doe</td>
+                      
+                      <td>
+                        <button type="button" class="btn btn-success">
+                          <i class="far fa-edit"></i>
+                        </button>
+                        <button type="button" class="btn btn-danger">
+                          <i class="far fa-trash-alt"></i>
+                        </button>
+                      </td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+              <!-- /.card-body -->
+            </div>
+            <!-- /.card -->
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  
+</div>
