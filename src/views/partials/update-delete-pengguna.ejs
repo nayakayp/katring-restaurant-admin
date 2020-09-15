@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
+      integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z"
+      crossorigin="anonymous"
+    />
+  </head>
+  <body>
+    <!-- Button trigger modal -->
+
+    <button
+      type="button"
+      class="btn btn-success"
+      data-toggle="modal"
+      data-target="#editPengguna"
+    >
+      <i class="far fa-edit"></i>
+    </button>
+
+    <button
+      type="button"
+      class="btn btn-danger"
+      data-toggle="modal"
+      data-target="#deletePengguna"
+    >
+      <i class="far fa-trash-alt"></i>
+    </button>
+
+    <!-- Modal -->
+    <div
+      class="modal fade"
+      id="editPengguna"
+      tabindex="-1"
+      aria-labelledby="exampleModalLabel"
+      aria-hidden="true"
+    >
+      <div class="modal-dialog modal-dialog-scrollable">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="exampleModalLabel">Edit Pengguna</h5>
+            <button
+              type="button"
+              class="close"
+              data-dismiss="modal"
+              aria-label="Close"
+            >
+              <span aria-hidden="true">&times;</span>
+            </button>
+          </div>
+          <div class="modal-body">
+            <form role="form">
+              <div class="card-body">
+                <div class="form-group">
+                  <label for="inputNamePengguna">Nama pengguna</label>
+                  <input
+                    type="text"
+                    class="form-control"
+                    id="inputNamePengguna"
+                    placeholder="Edit Namamu"
+                    name="nama"
+                  />
+                </div>
+
+                <div class="form-group">
+                  <label for="inputEmailPengguna">Email pengguna</label>
+                  <input
+                    type="email"
+                    class="form-control"
+                    id="inputEmailPengguna"
+                    placeholder="Edit emailmu"
+                    name="email"
+                  />
+                </div>
+                <div class="form-group">
+                  <label for="inputPassword1Pengguna">Password</label>
+
+                  <input
+                    type="password"
+                    class="form-control"
+                    id="inputPassword1Pengguna"
+                    placeholder="Password"
+                    name="password"
+                  />
+                </div>
+
+                <div class="form-group">
+                  <label for="inputPassword2Pengguna"
+                    >Password Confirmation</label
+                  >
+
+                  <input
+                    type="password"
+                    class="form-control"
+                    id="inputPassword2Pengguna"
+                    placeholder="Password"
+                    name="password2"
+                  />
+                </div>
+
+                <div class="form-group">
+                  <label for="selectRolePengguna">Roles</label>
+                  <select
+                    class="custom-select"
+                    name="roles"
+                    style="display: block"
+                  >
+                    <option>Super Admin</option>
+                    <option>Support</option>
+                  </select>
+                </div>
+              </div>
+              <!-- /.card-body -->
+            </form>
+            <div class="modal-footer">
+              <button
+                type="button"
+                class="btn btn-secondary"
+                data-dismiss="modal"
+              >
+                Cancel
+              </button>
+              <button type="button" class="btn btn-primary">Simpan data</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div
+      class="modal fade"
+      id="deletePengguna"
+      tabindex="-1"
+      aria-labelledby="exampleModalLabel"
+      aria-hidden="true"
+    >
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="exampleModalLabel">Perhatian!</h5>
+            <button
+              type="button"
+              class="close"
+              data-dismiss="modal"
+              aria-label="Close"
+            >
+              <span aria-hidden="true">&times;</span>
+            </button>
+          </div>
+          <div class="modal-body">Anda Yakin ingin menghapus pengguna ini?</div>
+          <div class="modal-footer">
+            <button
+              type="button"
+              class="btn btn-secondary"
+              data-dismiss="modal"
+            >
+              Tidak
+            </button>
+            <button type="button" class="btn btn-danger">Hapus</button>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- Modal -->
+    <script
+      src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
+      integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"
+      integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"
+      integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV"
+      crossorigin="anonymous"
+    ></script>
+  </body>
+</html>

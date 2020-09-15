@@ -91,26 +91,36 @@
               <li class="nav-item">
                 <% if(pageName=='transaksi'){ %>
                 <a href="/transaksi" class="nav-link active">
-                  <% }%> <% if(pageName!='dashboard'){%>
+                  <% }%> <% if(pageName!='transaksi'){%>
                   <a href="/transaksi" class="nav-link">
                   <%}%>
-                  <i class="nav-icon fas fa-tachometer-alt"></i>
+                  <i class="nav-icon fas fa-dollar-sign"></i>
                   <p>Transaksi</p>
                 </a>
               </li>
 
               <li class="nav-item">
-                <a href="/produk" class="nav-link">
+                <% if(pageName=='produk'){ %>
+                <a href="/produk" class="nav-link active">
+                  <% }%> <% if(pageName!='produk'){%>
+                  <a href="/produk" class="nav-link">
+                  <%}%>
+                  
                   <i class="nav-icon fas fa-box-open"></i>
                   <p>Produk</p>
                 </a>
               </li>
+
               <li class="nav-item">
-                <a href="pengguna" class="nav-link">
+                <% if(pageName=='pengguna'){ %>
+                <a href="/pengguna" class="nav-link active">
+                  <% }%> <% if(pageName!='pengguna'){%>
+                  <a href="/pengguna" class="nav-link">
+                  <%}%>
                   <i class="nav-icon fas fa-user-friends"></i>
                   <p>Pengguna</p>
                 </a>
-              </li>
+
             </ul>
           </nav>
           <!-- /.sidebar-menu -->

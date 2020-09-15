@@ -76,8 +76,23 @@
                   <option>Kalimantan Utara</option>
                 </select>
               </div>
+              
+              <div class="form-group">
+                <label for="exampleInputFile">Upload Gambar</label>
+                <div class="input-group">
+                  <div class="custom-file">
+                    <input type="file" class="custom-file-input" id="exampleInputFile">
+                    <label class="custom-file-label" for="exampleInputFile">Browse</label>
+                  </div>
+                  <div class="input-group-append">
+                    <span class="input-group-text" id="">Upload</span>
+                  </div>
+                </div>
+              </div>
             </div>
             <!-- /.card-body -->
+
+            
 
             <div class="card-footer">
               <button type="submit" class="btn btn-primary">Create</button>
@@ -151,12 +166,8 @@
                       <td>John Doe</td>
                       
                       <td>
-                        <button type="button" class="btn btn-success">
-                          <i class="far fa-edit"></i>
-                        </button>
-                        <button type="button" class="btn btn-danger">
-                          <i class="far fa-trash-alt"></i>
-                        </button>
+                        <%- include('partials/update-delete-kategori'); %>
+                       
                       </td>
                     </tr>
                     <tr>
@@ -164,12 +175,7 @@
                       <td>Alexander Pierce</td>
                       
                       <td>
-                        <button type="button" class="btn btn-success">
-                          <i class="far fa-edit"></i>
-                        </button>
-                        <button type="button" class="btn btn-danger">
-                          <i class="far fa-trash-alt"></i>
-                        </button>
+                        <%- include('partials/update-delete-kategori'); %>
                       </td>
                     </tr>
                     <tr>
@@ -177,12 +183,7 @@
                       <td>Bob Doe</td>
                       
                       <td>
-                        <button type="button" class="btn btn-success">
-                          <i class="far fa-edit"></i>
-                        </button>
-                        <button type="button" class="btn btn-danger">
-                          <i class="far fa-trash-alt"></i>
-                        </button>
+                        <%- include('partials/update-delete-kategori'); %>
                       </td>
                     </tr>
                     <tr>
@@ -190,12 +191,7 @@
                       <td>Mike Doe</td>
                       
                       <td>
-                        <button type="button" class="btn btn-success">
-                          <i class="far fa-edit"></i>
-                        </button>
-                        <button type="button" class="btn btn-danger">
-                          <i class="far fa-trash-alt"></i>
-                        </button>
+                        <%- include('partials/update-delete-kategori'); %>
                       </td>
                     </tr>
                     <tr>
@@ -203,12 +199,7 @@
                       <td>Jim Doe</td>
                       
                       <td>
-                        <button type="button" class="btn btn-success">
-                          <i class="far fa-edit"></i>
-                        </button>
-                        <button type="button" class="btn btn-danger">
-                          <i class="far fa-trash-alt"></i>
-                        </button>
+                        <%- include('partials/update-delete-kategori'); %>
                       </td>
                     </tr>
                     <tr>
@@ -216,12 +207,7 @@
                       <td>Victoria Doe</td>
                       
                       <td>
-                        <button type="button" class="btn btn-success">
-                          <i class="far fa-edit"></i>
-                        </button>
-                        <button type="button" class="btn btn-danger">
-                          <i class="far fa-trash-alt"></i>
-                        </button>
+                        <%- include('partials/update-delete-kategori'); %>
                       </td>
                     </tr>
                     <tr>
@@ -229,12 +215,7 @@
                       <td>Michael Doe</td>
                       
                       <td>
-                        <button type="button" class="btn btn-success">
-                          <i class="far fa-edit"></i>
-                        </button>
-                        <button type="button" class="btn btn-danger">
-                          <i class="far fa-trash-alt"></i>
-                        </button>
+                        <%- include('partials/update-delete-kategori'); %>
                       </td>
                     </tr>
                     <tr>
@@ -242,12 +223,7 @@
                       <td>Rocky Doe</td>
                       
                       <td>
-                        <button type="button" class="btn btn-success">
-                          <i class="far fa-edit"></i>
-                        </button>
-                        <button type="button" class="btn btn-danger">
-                          <i class="far fa-trash-alt"></i>
-                        </button>
+                        <%- include('partials/update-delete-kategori'); %>
                       </td>
                     </tr>
                   </tbody>
@@ -258,6 +234,139 @@
             <!-- /.card -->
           </div>
         </div>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-12">
+        <div class="card card-danger">
+          <div class="card-header">
+            <h3 class="card-title">Daftar Produk</h3>
+  
+            <div class="card-tools">
+              <div class="input-group input-group-sm" style="width: 150px">
+                <input
+                  type="text"
+                  name="table_search"
+                  class="form-control float-right"
+                  placeholder="Search"
+                />
+  
+                <div class="input-group-append">
+                  <button type="submit" class="btn btn-default">
+                    <i class="fas fa-search"></i>
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+          <!-- /.card-header -->
+          <div class="card-body table-responsive p-0" style="height: 300px">
+            <table class="table table-head-fixed text-nowrap">
+              <thead>
+                <tr>
+                  <th>#</th>
+                  <th>Nama Produk</th>
+                  <th>Harga</th>
+                  <th>Deskripsi</th>
+                  <th>Kategori</th>
+                  <th>Action</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>183</td>
+                  <td>John Doe</td>
+                  <td>11-7-2014</td>
+                  <td>11-7-2014</td>
+
+                  <td><span class="tag tag-success">Approved</span></td>
+                  <td>
+                    <%- include('partials/update-delete-produk'); %>
+                  </td>
+                </tr>
+                <tr>
+                  <td>219</td>
+                  <td>Alexander Pierce</td>
+                  <td>11-7-2014</td>
+                  <td>11-7-2014</td>
+
+                  <td><span class="tag tag-warning">Pending</span></td>
+                  <td>
+                    <%- include('partials/update-delete-produk'); %>
+                  </td>
+                </tr>
+                <tr>
+                  <td>657</td>
+                  <td>Bob Doe</td>
+                  <td>11-7-2014</td>
+                  <td>11-7-2014</td>
+
+                  <td><span class="tag tag-primary">Approved</span></td>
+                  <td>
+                    <%- include('partials/update-delete-produk'); %>
+                  </td>
+                </tr>
+                <tr>
+                  <td>175</td>
+                  <td>Mike Doe</td>
+                  <td>11-7-2014</td>
+                  <td>11-7-2014</td>
+
+                  <td><span class="tag tag-danger">Denied</span></td>
+                  <td>
+                    <%- include('partials/update-delete-produk'); %>
+                  </td>
+                </tr>
+                <tr>
+                  <td>134</td>
+                  <td>Jim Doe</td>
+                  <td>11-7-2014</td>
+                  <td>11-7-2014</td>
+
+                  <td><span class="tag tag-success">Approved</span></td>
+                  <td>
+                    <%- include('partials/update-delete-produk'); %>
+                  </td>
+                </tr>
+                <tr>
+                  <td>494</td>
+                  <td>Victoria Doe</td>
+                  <td>11-7-2014</td>
+                  <td>11-7-2014</td>
+
+                  <td><span class="tag tag-warning">Pending</span></td>
+                  <td>
+                    <%- include('partials/update-delete-produk'); %>
+                  </td>
+                </tr>
+                <tr>
+                  <td>832</td>
+                  <td>Michael Doe</td>
+                  <td>11-7-2014</td>
+                  <td>11-7-2014</td>
+
+                  <td><span class="tag tag-primary">Approved</span></td>
+                  <td>
+                    <%- include('partials/update-delete-produk'); %>
+                  </td>
+                </tr>
+                <tr>
+                  <td>982</td>
+                  <td>Rocky Doe</td>
+                  <td>11-7-2014</td>
+                  <td>11-7-2014</td>
+
+                  <td><span class="tag tag-danger">Denied</span></td>
+                  <td>
+                    <%- include('partials/update-delete-produk'); %>
+                  </td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+          <!-- /.card-body -->
+        </div>
+        <!-- /.card -->
       </div>
     </div>
   </div>
