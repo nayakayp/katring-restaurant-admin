@@ -1,12 +1,22 @@
 const express = require("express");
 const router = express.Router();
 
+// Import controller modules.
+const admin_controller = require("../controllers/adminController");
+
+// ADMIN ROUTES //
+
+//GET Dashboard
+router.get("/", admin_controller.dashboard);
+
+// GET request for _reading_ PROFIL
 router.get("/editprofil", (req, res) => {
   res.render("editprofil.ejs", { pageName: "editprofil", layout: "layout" });
 });
 
-router.get("/", (req, res) => {
-  res.render("dashboard.ejs", { pageName: "dashboard", layout: "layout" });
+// POST request for _updating_PROFIL
+router.post("/editprofil/:id/update", (req, res) => {
+  res.render("editprofil.ejs");
 });
 
 router.get("/transaksi", (req, res) => {
