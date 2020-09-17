@@ -1,4 +1,5 @@
 const mongoose = require("mongoose");
+mongoose.pluralize("null");
 const Schema = mongoose.Schema;
 
 const PelangganSchema = new Schema({
@@ -6,11 +7,9 @@ const PelangganSchema = new Schema({
   emailPelanggan: { type: String, required: true },
   perusahaanPelanggan: { type: String, required: true },
   alamatPelanggan: { type: String, required: true },
+  kodepos: { type: Number, required: true },
   telponPelanggan: { type: Number, required: true },
-  metodePembayaran: { type: String, required: true },
-  jumlahPembayaran: { type: Number, required: true },
-  waktuTransaksi: { type: Date, default: Date.now },
   orderID: { type: String, required: true },
 });
 
-module.exports = mongoose.model("Pelanggan", PelangganSchema);
+module.exports = mongoose.model("pelanggan", PelangganSchema);

@@ -29,7 +29,7 @@
           </div>
           <!-- /.card-header -->
           <!-- form start -->
-          <form role="form">
+          <form action="/produk" method="POST" role="form">
             <div class="card-body">
               <div class="form-group">
                 <label for="inputNameProduk">Nama produk</label>
@@ -91,9 +91,6 @@
               </div>
             </div>
             <!-- /.card-body -->
-
-            
-
             <div class="card-footer">
               <button type="submit" class="btn btn-primary">Create</button>
             </div>
@@ -107,7 +104,7 @@
           </div>
           <!-- /.card-header -->
           <!-- form start -->
-          <form role="form">
+          <form action="/kategori" method="POST" role="form">
             <div class="card-body">
               <div class="form-group">
                 <label for="createKategoriProduk">Nama Kategori</label>
@@ -161,71 +158,15 @@
                     </tr>
                   </thead>
                   <tbody>
+                    <% for(var i=0; i < kategori.length; i++) { %>
                     <tr>
-                      <td>183</td>
-                      <td>John Doe</td>
-                      
-                      <td>
-                        <%- include('partials/update-delete-kategori'); %>
-                       
-                      </td>
-                    </tr>
-                    <tr>
-                      <td>219</td>
-                      <td>Alexander Pierce</td>
-                      
+                      <td><%=i+1%></td>
+                      <td><%=kategori[i].nama%></td>
                       <td>
                         <%- include('partials/update-delete-kategori'); %>
                       </td>
                     </tr>
-                    <tr>
-                      <td>657</td>
-                      <td>Bob Doe</td>
-                      
-                      <td>
-                        <%- include('partials/update-delete-kategori'); %>
-                      </td>
-                    </tr>
-                    <tr>
-                      <td>175</td>
-                      <td>Mike Doe</td>
-                      
-                      <td>
-                        <%- include('partials/update-delete-kategori'); %>
-                      </td>
-                    </tr>
-                    <tr>
-                      <td>134</td>
-                      <td>Jim Doe</td>
-                      
-                      <td>
-                        <%- include('partials/update-delete-kategori'); %>
-                      </td>
-                    </tr>
-                    <tr>
-                      <td>494</td>
-                      <td>Victoria Doe</td>
-                      
-                      <td>
-                        <%- include('partials/update-delete-kategori'); %>
-                      </td>
-                    </tr>
-                    <tr>
-                      <td>832</td>
-                      <td>Michael Doe</td>
-                      
-                      <td>
-                        <%- include('partials/update-delete-kategori'); %>
-                      </td>
-                    </tr>
-                    <tr>
-                      <td>982</td>
-                      <td>Rocky Doe</td>
-                      
-                      <td>
-                        <%- include('partials/update-delete-kategori'); %>
-                      </td>
-                    </tr>
+                    <% } %>
                   </tbody>
                 </table>
               </div>
@@ -273,94 +214,18 @@
                 </tr>
               </thead>
               <tbody>
+                <% for(var i=0; i < produk.length; i++) { %>
                 <tr>
-                  <td>183</td>
-                  <td>John Doe</td>
-                  <td>11-7-2014</td>
-                  <td>11-7-2014</td>
-
-                  <td><span class="tag tag-success">Approved</span></td>
+                  <td><%=i+1%></td>
+                  <td><%=produk[i].judulProduk%></td>
+                  <td><%=produk[i].hargaProduk%></td>
+                  <td><%=produk[i].deskripsiProduk.slice(0,15)%>...</td>
+                  <td><%=produk[i].kategoriProduk%></td>
                   <td>
                     <%- include('partials/update-delete-produk'); %>
                   </td>
                 </tr>
-                <tr>
-                  <td>219</td>
-                  <td>Alexander Pierce</td>
-                  <td>11-7-2014</td>
-                  <td>11-7-2014</td>
-
-                  <td><span class="tag tag-warning">Pending</span></td>
-                  <td>
-                    <%- include('partials/update-delete-produk'); %>
-                  </td>
-                </tr>
-                <tr>
-                  <td>657</td>
-                  <td>Bob Doe</td>
-                  <td>11-7-2014</td>
-                  <td>11-7-2014</td>
-
-                  <td><span class="tag tag-primary">Approved</span></td>
-                  <td>
-                    <%- include('partials/update-delete-produk'); %>
-                  </td>
-                </tr>
-                <tr>
-                  <td>175</td>
-                  <td>Mike Doe</td>
-                  <td>11-7-2014</td>
-                  <td>11-7-2014</td>
-
-                  <td><span class="tag tag-danger">Denied</span></td>
-                  <td>
-                    <%- include('partials/update-delete-produk'); %>
-                  </td>
-                </tr>
-                <tr>
-                  <td>134</td>
-                  <td>Jim Doe</td>
-                  <td>11-7-2014</td>
-                  <td>11-7-2014</td>
-
-                  <td><span class="tag tag-success">Approved</span></td>
-                  <td>
-                    <%- include('partials/update-delete-produk'); %>
-                  </td>
-                </tr>
-                <tr>
-                  <td>494</td>
-                  <td>Victoria Doe</td>
-                  <td>11-7-2014</td>
-                  <td>11-7-2014</td>
-
-                  <td><span class="tag tag-warning">Pending</span></td>
-                  <td>
-                    <%- include('partials/update-delete-produk'); %>
-                  </td>
-                </tr>
-                <tr>
-                  <td>832</td>
-                  <td>Michael Doe</td>
-                  <td>11-7-2014</td>
-                  <td>11-7-2014</td>
-
-                  <td><span class="tag tag-primary">Approved</span></td>
-                  <td>
-                    <%- include('partials/update-delete-produk'); %>
-                  </td>
-                </tr>
-                <tr>
-                  <td>982</td>
-                  <td>Rocky Doe</td>
-                  <td>11-7-2014</td>
-                  <td>11-7-2014</td>
-
-                  <td><span class="tag tag-danger">Denied</span></td>
-                  <td>
-                    <%- include('partials/update-delete-produk'); %>
-                  </td>
-                </tr>
+                <% } %>
               </tbody>
             </table>
           </div>

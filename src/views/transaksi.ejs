@@ -31,65 +31,31 @@
                 <tr>
                   <th>Waktu Transaksi</th>
                   <th>Jenis Transaksi</th>
-                  <th><a href="#">Order ID</a></th>
+                  <th>Detail Transaksi</th>
                   <th>Email Pelanggan</th>
                   <th>Jumlah</th>
                   <th>Status</th>
                 </tr>
               </thead>
               <tbody>
+                <% for(var i=0; i < datas.length; i++) { %>
                 <tr>
-                  <td>Trident</td>
-                  <td>Internet Explorer 4.0</td>
-                  <td>Win 95+</td>
-                  <td>4</td>
-                  <td>X</td>
+                  <td><%=datas[i].tanggal%> : <%=datas[i].waktu%></td>
+                  <td><%=datas[i].ch_pembayaran%></td>
                   <td>
-                    <button type="button" class="btn btn-success">
-                      <i class="far fa-edit"></i>
-                    </button>
-                    <button type="button" class="btn btn-danger">
-                      <i class="far fa-trash-alt"></i>
-                    </button>
+                    <a href="/transaksi/<%=datas[i].orderID%>">[details]</a>
                   </td>
+                  <td><%=datas[i].emailPelanggan%></td>
+                  <td><%=datas[i].total_pembayaran%></td>
+                  <td><%=datas[i].status%></td>
                 </tr>
-                <tr>
-                  <td>Trident</td>
-                  <td>Internet Explorer 4.0</td>
-                  <td>Win 95+</td>
-                  <td>4</td>
-                  <td>X</td>
-                  <td>
-                    <button type="button" class="btn btn-success">
-                      <i class="far fa-edit"></i>
-                    </button>
-                    <button type="button" class="btn btn-danger">
-                      <i class="far fa-trash-alt"></i>
-                    </button>
-                  </td>
-                </tr>
-                <tr>
-                  <td>Broden</td>
-                  <td>Internet Explorer 4.0</td>
-                  <td>Win 95+</td>
-                  <td>1</td>
-                  <td>X</td>
-                  <td>
-                    <button type="button" class="btn btn-success">
-                      <i class="far fa-edit"></i>
-                    </button>
-                    <button type="button" class="btn btn-danger">
-                      <i class="far fa-trash-alt"></i>
-                    </button>
-                  </td>
-                </tr>
+                <% } %>
               </tbody>
               <tfoot>
                 <tr>
                   <th>Waktu Transaksi</th>
                   <th>Jenis Transaksi</th>
-                  <th><a href="#">Order ID</a></th>
-
+                  <th>Detail Transaksi</th>
                   <th>Email Pelanggan</th>
                   <th>Jumlah</th>
                   <th>Status</th>

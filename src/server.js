@@ -25,3 +25,5 @@ app.use(express.static(path.join(__dirname, "public")));
 app.use("/", adminRouter);
 
 app.listen(3000, console.log("listening on 3000"));
+
+module.exports = DB_URI;

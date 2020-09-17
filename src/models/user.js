@@ -1,4 +1,5 @@
 const mongoose = require("mongoose");
+mongoose.pluralize("null");
 const Schema = mongoose.Schema;
 
 const UserSchema = new Schema({
@@ -9,4 +10,4 @@ const UserSchema = new Schema({
   fotoUser: { type: String, required: true },
 });
 
-module.exports = mongoose.model("User", UserSchema);
+module.exports = mongoose.model("user", UserSchema);

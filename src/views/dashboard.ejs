@@ -82,48 +82,34 @@
             <table id="example2" class="table table-bordered table-hover">
               <thead>
                 <tr>
-                  <th>#</th>
-                  <th>Waktu Penjualan</th>
+                  <th>Tanggal</th>
+                  <th>Waktu</th>
+                  <th>Via</th>
                   <th>Pembeli</th>
-                  <th>Nama Produk</th>
                   <th>Jumlah</th>
-                  <th>Total</th>
+                  <th>Status</th>
                 </tr>
               </thead>
               <tbody>
+                <% for(var i=0; i < datas.length; i++) { %>
                 <tr>
-                  <td>Trident</td>
-                  <td>Internet Explorer 4.0</td>
-                  <td>Win 95+</td>
-                  <td>4</td>
-                  <td>X</td>
-                  <td>Rp 2310</td>
+                  <td><%=datas[i].tanggal%></td>
+                  <td><%=datas[i].waktu%></td>
+                  <td><%=datas[i].ch_pembayaran%></td>
+                  <td><%=datas[i].namaPelanggan%></td>
+                  <td><%=datas[i].total_pembayaran%></td>
+                  <td><%=datas[i].status%></td>
                 </tr>
-                <tr>
-                  <td>Trident</td>
-                  <td>Internet Explorer 4.0</td>
-                  <td>Win 95+</td>
-                  <td>4</td>
-                  <td>X</td>
-                  <td>Rp 2310</td>
-                </tr>
-                <tr>
-                  <td>Broden</td>
-                  <td>Internet Explorer 4.0</td>
-                  <td>Win 95+</td>
-                  <td>1</td>
-                  <td>X</td>
-                  <td>Rp 2310</td>
-                </tr>
+                <% } %>
               </tbody>
               <tfoot>
                 <tr>
-                  <th>#</th>
-                  <th>Waktu Penjualan</th>
+                  <th>Tanggal</th>
+                  <th>Waktu</th>
+                  <th>Via</th>
                   <th>Pembeli</th>
-                  <th>Nama Produk</th>
                   <th>Jumlah</th>
-                  <th>Total</th>
+                  <th>Status</th>
                 </tr>
               </tfoot>
             </table>

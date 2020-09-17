@@ -32,16 +32,18 @@
         <div class="card-body">
           <dl class="row">
             <dt class="col-sm-4">Order ID</dt>
-            <dd class="col-sm-8">272h9asdfhj9123798213mkasdjfhaksdfh</dd>
+            <dd class="col-sm-8"><%=datas.orderID%></dd>
             <dt class="col-sm-4">Metode Pembayaran</dt>
-            <dd class="col-sm-8">Bank BNI 46</dd>
+            <dd class="col-sm-8"><%=datas.ch_pembayaran%></dd>
             <dt class="col-sm-4">Jumlah</dt>
-            <dd class="col-sm-8">Rp 2.500.000</dd>
+            <dd class="col-sm-8">Rp <%=datas.total_pembayaran%></dd>
+            <dt class="col-sm-4">Tanggal Transaksi</dt>
+            <dd class="col-sm-8"><%=datas.tanggal%></dd>
             <dt class="col-sm-4">Waktu Transaksi</dt>
-            <dd class="col-sm-8">20 Desember 2050</dd>
+            <dd class="col-sm-8"><%=datas.waktu%></dd>
             <dt class="col-sm-4">Status</dt>
             <dd class="col-sm-8">
-              <div class="btn btn-sm btn-success">Completed</div>
+              <div class="btn btn-sm btn-success"><%=datas.status%></div>
             </dd>
           </dl>
         </div>
@@ -61,18 +63,70 @@
         <div class="card-body">
           <dl class="row">
             <dt class="col-sm-4">Nama</dt>
-            <dd class="col-sm-8">Nayaka Yoga Pradipta</dd>
+            <dd class="col-sm-8"><%=datas.namaPelanggan%></dd>
             <dt class="col-sm-4">Email</dt>
-            <dd class="col-sm-8">nayakayp@gmail.com</dd>
+            <dd class="col-sm-8"><%=datas.emailPelanggan%></dd>
             <dt class="col-sm-4">Perusahaan</dt>
-            <dd class="col-sm-8">Bigger Inc</dd>
+            <dd class="col-sm-8"><%=datas.perusahaan%></dd>
             <dt class="col-sm-4">Alamat</dt>
-            <dd class="col-sm-8">Jalan A. Yani, Surabaya</dd>
+            <dd class="col-sm-8"><%=datas.alamat%></dd>
             <dt class="col-sm-4">No Telp</dt>
-            <dd class="col-sm-8">0123840923</dd>
+            <dd class="col-sm-8"><%=datas.telpon%></dd>
           </dl>
         </div>
         <!-- /.card-body -->
+      </div>
+      <!-- /.card -->
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-12">
+      <div class="card">
+        <div class="card-header">
+          <h3 class="card-title">
+            <i class="fas fa-text-width"></i>
+             Item Details
+            </h3>
+
+          <div class="card-tools">
+            <div class="input-group input-group-sm" style="width: 150px">
+              
+            </div>
+          </div>
+        </div>
+        <!-- /.card-header -->
+        <div class="card-body table-responsive p-0">
+          <table class="table table-hover text-nowrap">
+            <thead>
+              <tr>
+                <th>Nama Produk</th>
+                <th>Quantity</th>
+                <th>Harga Tiap pcs</th>
+                <th style="text-align:right;">Subtotal</th>
+              </tr>
+            </thead>
+            <tbody>
+              <% for(var i=0; i < datas.orderDetails.length; i++) { %>
+                <tr>
+                  <td><%=datas.orderDetails[i].product_name%></td>
+                  <td><%=datas.orderDetails[i].quantity%></td>
+                  <td><%=datas.orderDetails[i].unit_price%></td>
+                  <td style="text-align:right;"><%=datas.orderDetails[i].sub_total%></td>
+                </tr>
+                <% } %>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <!-- /.card-body -->
+        <div class="card-footer">
+          <ul class="pagination pagination-sm m-0 float-right">
+            <h5><strong>Rp <%=datas.total_pembayaran%></strong></h5>
+          </ul>
+          <ul class="pagination pagination-sm m-0 float-left">
+            <h5><strong>Total</strong></h5>
+          </ul>
+        </div>
       </div>
       <!-- /.card -->
     </div>
